@@ -2,13 +2,128 @@
 <html> <!-- ini merupakan tag html yang terdiri dari tag pembuka dan penutup -->
     <head> <!-- dalam head dapat pasang judul (title), meta untuk SPO -->
         <title>Website Ku</title> <!-- judul tab website -->
+        <style>
+            table, th, td {
+                border: 1px solid black;
+            }
+        </style>
     </head>
     <body> <!-- ini merupakan inti dari Website dapat berisi isi konten, gambar, video, dll -->
-        <h1>Belajar Fundamental Membuat Website dari Course Revou</h1> <!-- h1 adalah pembuata teks judul dengan ukuran yang lebih besar, jadi di dalam html makin besar tulisan makin kecil angkanya -->
+       <h1 style="color: brown;">Belajar Fundamental Membuat Website dari Course Revou</h1> <!-- h1 adalah pembuata teks judul dengan ukuran yang lebih besar, jadi di dalam html makin besar tulisan makin kecil angkanya -->
+       <!-- tag itu berupa <h1>, attribut berupa style="color:red"; -->
+        <!-- element itu berupa <h1 style="color: red";> -->
+        <p>ini paragraph 1</p>
+        <p>ini paragraph 2</p>
+        <hr> <!-- memberikan garis -->
+        ini baris 1 
+        <br> <!-- memberikan break fungsinya seperti enter pada tulisan -->
+        ini baris 2
+        <hr>
+        <p><b>this text is bold</b></p>
+        <p><i>this text is italic</i></p>
+        <p>this is <sub>subscript</sub> and <sup>supscript</sup></p>
+        <hr>
+        <ul>
+            <li>sunflower</li>
+            <li>lily</li>
+            <li>rose</li>
+            <li>tulip</li>
+                <ol type="I">
+                    <li>sunflower</li>
+                    <li>lily</li>
+                    <li>rose</li>
+                    <li>tulip</li>
+                </ol>
+        </ul>
+        <hr>
+        <table>
+            <tr>
+                <th>Company</th> <!-- table header -->
+                <th>Contract</th>
+                <th>Country</th>
+            </tr>
+            <tr>
+                <td>Alfreds</td>
+                <td>Maria</td>
+                <td>Germany</td>
+            </tr>
+        </table>
+        <hr>
+        <table>
+            <tr>
+                <th>Asal</th>
+                <th>Domisili</th>
+            </tr>
+            <tr>
+                <td colspan="2">Tangerang</td>
+            </tr>
+        </table>
+        <hr>
+        <img src="https://klikhijau.com/wp-content/uploads/2020/04/kamboja.jpg" alt="Bunga"/> <!-- alt wajib untuk diisi karna untuk screen reader imagenya -->
+        <hr>
+        <p>
+            <a href="https://www.google.com/" target="_blank">Google</a>
+        </p>
+        <hr>
+        <a href="#cari-aku">Cari aku</a>
+        <p>Kau</p>
+        <p>Kau</p>
+        <p>Kau</p>
+        <p>Kau</p>
+        <p>Kau</p>
+        <p>Kau</p>
+        <p id="cari-aku">aku</p>
+        <hr>
+        <form action="" method="post">
+            <label for="name">Nama:</label>
+            <input id="name" type="text">
+            <br/>
+            <label for="password">Password:</label>
+            <input id="password" type="password">
+            <br/>
+            <input type="checkbox">
+            <br/>
+            <input type="radio">
+            <br/>
+            <input type="textbox">
+        </form>
+        <button type="button">OK</button>
+        <hr>
+        <p>Warna</p>
+        <select>
+            <option>Merah</option>
+            <option>Kuning</option>
+            <option>Hijau</option>
+        </select>
+        <hr>
+        <fieldset>
+            <legend>Data diri</legend>
+            <p>
+                <label for="nama">Nama</label>
+                <input id="nama" type="text">
+            </p>
+            <p>
+                <label for="usia">Usia</label>
+                <input id="usia" type="number">
+            </p>
+        </fieldset>
+        <hr>
+        <b>ini tulisan bold</b> <!-- untuk menekankan hal2 penting -->
+        <br>
+        <strong>ini tulisan strong</strong> <!-- paling lebih ditekankan dari pada tag <b> -->
+        <hr>
+        <div>divisi 1</div>
+        <div>divisi 2</div>
+        <div>dividi 3</div>
+        <br>
+        <span>span 1</span>
+        <span>span 2</span>
+        <span>span 3</span>
     </body> 
 </html>
 <!-- clear = untuk membersihkan code2 git di terminal 
 git init = untuk memulai git didalam projek (untuk menginisiasi ada git di dalam folder Training 1)
 git add . = untuk mendaftarkan/meng-add semua file yang ada di dalam folder Training (untuk mendaftarkan file yang ada di folder di dalam git)
 git commit -m "komen/pesan" = save coding, membuat checkpoint dari perubahan file codenya 
-jika mau memeriksa git commit yang telah dibuat, 1. buka github, 2. pilih file, lalu add local repository, lalu cari folder yang mau dibuka, 3. setelah itu pilih open (nanti akan terlihat sudah ada berapa kali git commit yang telah dilakukan dan akan terdeteksi di github)-->
+jika mau memeriksa git commit yang telah dibuat, 1. buka github, 2. pilih file, lalu add local repository, lalu cari folder yang mau dibuka, 3. setelah itu pilih open (nanti akan terlihat sudah ada berapa kali git commit yang telah dilakukan dan akan terdeteksi di github)
+di file ini sudah 3 kali commit-->
