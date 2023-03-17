@@ -1,0 +1,26 @@
+/* div {
+    border: 1px solid red; /* cheat code untuk mengetahui bounderies div ukurannya sebesar apa, tinggal taruh element2 saja 
+} */
+
+.card {
+    background-color: gainsboro;
+    padding: 1em 2em; /* fungsinya agar tidak terlalu mepet dengan border dan elemen lain, 10px bagian bottom 20px bagian left&rigt, em adalah sesuai dgn ukuran text rootnya si bodynya, sedangkan rem sesuai dgn ukuran parentnya agar bisa mengetahui spasinya brp karakter contoh bagian bottom 1rem bagian left&right 2rem, jika pakai px umumnya kalau ukurannya membesar/mengecil nanti ukurannya agak kacau kesana kemari. disarankan pakai % atau em */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"] { /* [] merupakan selector saja, jika mau auto komen ketik ctrl+/ */
+    width: 90%;
+}
+
+.icon {
+    width: 1%;
+    border: 1px solid gray;
+}
