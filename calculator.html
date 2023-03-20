@@ -73,14 +73,14 @@
         <hr>
         <table>
             <tr>
-                <th colspan="4"><input type="text" name="display"></th>
+                <th colspan="4"><input id="calc-display" type="text" name="display"></th>
             </tr>
             <tr>
                 <td colspan="2">
-                    <button class="red">AC</button>
+                    <button class="red" id="clear-all-button">AC</button>
                 </td>
                 <td>
-                    <button class="blue">C</button>
+                    <button class="blue" id="clear-button">C</button>
                 </td>
                 <td>
                     <button class="operator">*</button>
@@ -88,13 +88,13 @@
             </tr>
             <tr>
                 <td>
-                    <button>7</button>
+                    <button class="number" id="7" value="7">7</button>
                 </td>
                 <td>
-                    <button>8</button>
+                    <button class="number" id="8" value="8">8</button>
                 </td>
                 <td>
-                    <button>9</button>
+                    <button class="number" id="9" value="9">9</button>
                 </td>
                 <td>
                     <button class="operator">/</button>
@@ -102,13 +102,13 @@
             </tr>
             <tr>
                 <td>
-                    <button>4</button>
+                    <button value="4" class="number" id="4">4</button>
                 </td>
                 <td>
-                    <button>5</button>
+                    <button value="5" class="number" id="5">5</button>
                 </td>
                 <td>
-                    <button>6</button>
+                    <button value="6" class="number" id="6">6</button>
                 </td>
                 <td>
                     <button class="operator">+</button>
@@ -116,13 +116,13 @@
             </tr>
             <tr>
                 <td>
-                    <button>1</button>
+                    <button value="1" class="number" id="1">1</button>
                 </td>
                 <td>
-                    <button>2</button>
+                    <button value="2" class="number" id="2">2</button>
                 </td>
                 <td>
-                    <button>3</button>
+                    <button value="3" class="number" id="3">3</button>
                 </td>
                 <td>
                     <button class="operator">-</button>
@@ -133,7 +133,7 @@
                     <button class="black">+-</button>
                 </td>
                 <td>
-                    <button>0</button>
+                    <button value="0" class="number" id="0">0</button>
                 </td>
                 <td>
                     <button class="black">.</button>
@@ -143,5 +143,31 @@
                 </td>
             </tr>
         </table>
+        <script>
+            var inputLabel = document.getElementById("calc-display");
+            //inputLabel.value = 9; //hanya untuk test apakah keluar angkanya atau tidak
+            var number = document.getElementsByClassName("number");
+            //console.log("number:", number.length); //hanya untuk cek ada berapa class number yang terdeteksi
+
+            var clearAllButton = document.getElementById("clear-all-button");
+            
+            var clearButton = document.getElementById("clear-button");
+
+            for(let i = 0; i < number.length; i++){
+                number[i].addEventListener("click", function(){
+                    var pushed = this.value;
+                    inputLabel.value = inputLabel.value + pushed;
+                })
+            }
+
+            clearAllButton.addEventListener("click", function(){
+                inputLabel.value = "";
+            })
+
+            clearButton.addEventListener("click", function(){
+                var maxLength = inputLabel.value.length;
+                inputLabel.value = inputLabel.value.substr(0, maxLength - 1)
+            })
+        </script>
     </body>
 </html>
