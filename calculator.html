@@ -139,7 +139,7 @@
                     <button class="black">.</button>
                 </td>
                 <td>
-                    <button class="green">=</button>
+                    <button class="green" id="result-button">=</button>
                 </td>
             </tr>
         </table>
@@ -152,6 +152,11 @@
             var clearAllButton = document.getElementById("clear-all-button");
             
             var clearButton = document.getElementById("clear-button");
+
+            var operator = document.getElementsByClassName("operator");
+            // console.log("operator:", operator.length);
+
+            var resultBtn = document.getElementById("result-button");
 
             for(let i = 0; i < number.length; i++){
                 number[i].addEventListener("click", function(){
@@ -167,6 +172,31 @@
             clearButton.addEventListener("click", function(){
                 var maxLength = inputLabel.value.length;
                 inputLabel.value = inputLabel.value.substr(0, maxLength - 1)
+            })
+
+            for(let i = 0; i < operator.length; i++){
+                operator[i].addEventListener("click", function(){
+                    var pushed = this.innerHTML;
+                    inputLabel.value = inputLabel.value + pushed;
+                })
+            }
+
+            resultBtn.addEventListener("click", function(){
+                try {
+                inputLabel.value = eval(inputLabel.value);
+                } catch (err){
+                    console.log("error handling");
+                }
+            })
+
+            inputLabel.addEventListener("input", function(){
+                //using regular expression: 0-9, +, -,*,/
+                var isValidInput = inputLabel.value.match(/^[0-9\+\-\*\/]$/);
+                if (isValidInput){
+                    alert("Valid Input");
+                } else {
+                    alert("Invalid Input");
+                }
             })
         </script>
     </body>
